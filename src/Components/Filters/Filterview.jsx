@@ -96,7 +96,7 @@ function SortPrice (e) {
                   <label>Price Range : to <span className="price-range">{state.ProductPriceRange}</span></label>
                    <input
                      type='range'
-                     min='0'
+                     min='300'
                      step='100'
                      max='2000'
                      value={state.ProductPriceRange}
