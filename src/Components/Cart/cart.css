@@ -1,0 +1,241 @@
+.cart-title{
+    margin: 0 auto;
+    text-align: center;
+}
+.cart-empty{
+    margin:  0 auto;
+    text-align: center;
+}
+.cart-main-div{
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+}
+.cart-product-cart-div{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cart-card-div{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.3rem;
+    margin-top: 1rem;
+    border: 1px solid gainsboro;
+} 
+.cart-card-img-div{
+    width: 8rem;
+    
+}
+.cart-card-info{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-left: 10%;
+}
+/* Cart Card Info  */
+.cart-info-name{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.cart-info-brand{
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    color: gray;
+}
+.cart-info-rating{
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    color: gray;
+}
+.cart-info-rating span{
+    font-size: 0.9rem;
+    color: orangered;
+}
+.cart-info-price{
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+}
+.cart-info-price span{
+    color: orangered;
+    font-size: 0.7rem;
+}
+
+/* cart card remove btn */
+.cart-card-remove-btn-div{
+    width: 24%;
+}
+.btn-remove-cart-card{
+    float: right;
+    margin-left: 100%;
+    background-color: transparent;
+    border: none;
+    color: orangered;
+    font-size: 1rem;
+}
+.btn-remove-cart-card:hover{
+    cursor: pointer;
+    color: black;
+}
+.btn-remove-cart-card:active{
+    color: gray;
+}
+
+/* Value div */
+.cart-value-main-div{
+    width: 40%;
+}
+.cart-value-div{
+    width: 70%;
+    height: 100%;
+    border-right: 1px solid gainsboro;
+}
+.cart-value-inner-div{
+    width: 80%;
+  
+}
+.cart-value-details-div{
+    display: flex;
+}
+.cart-value-length-div{
+    display: flex;
+    margin-top: 1rem;
+    color: gray;
+}
+.cart-value-length-div div{
+    width: 50%;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
+.cart-value-delivery-div{
+    display: flex;
+    margin-top: 1rem;
+    color: gray;
+}
+.cart-value-delivery-div div{
+    width: 50%;
+    
+    color: black;
+}
+.delivery-div-span{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    color: orangered;
+   
+}
+.delivery-div-span p{
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 2px;
+}
+.cart-value-totalamount-div{
+    border-top: 2px solid whitesmoke;
+    display: flex;
+    margin-top: 2rem;
+    color: gray;
+}
+.cart-value-totalamount-div div{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+}
+
+/* cart card buttons */
+.cart-card-btn-div{
+    margin-top: 1rem;
+    display: flex;
+}
+.btn-trash-or-minus{
+    font-size: 1rem;
+    width: 2rem;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 2px;
+    font-weight: 600;
+}
+.btn-trash-or-minus:hover{
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+.btn-trash-or-minus:active{
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+}
+.cart-card-quantity{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    width: 2rem;
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+    text-align: center;
+}
+.btn-cart-card-inrcease{
+    font-size: 1rem;
+    width: 2rem;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 2px;
+    font-weight: 600;
+}
+.btn-cart-card-inrcease:hover{
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+.btn-cart-card-inrcease:active{
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+}
+
+
+
+
+
+/* for mobile */
+@media only screen and (max-width: 800px) {
+    .cart-main-div{
+        flex-direction: column;
+    }
+
+    .cart-product-cart-div{
+        width: 100%;
+    }
+    .cart-card-div{
+        width: 90%;
+        flex-direction: column;
+    }
+    .cart-card-img-div{
+        margin: 0 auto;
+    }
+    .cart-value-main-div{
+        width: 100%;
+    }
+    .cart-value-div{
+        width: 100%;
+        
+    }
+    .cart-value-inner-div{
+        width: 80%;
+        margin:  0 auto;
+        margin-top: 1rem;
+        border-top: 1px solid gray;
+    }
+    .cart-card-info{
+        margin: 0 auto;
+    }
+    .cart-card-remove-btn-div{
+        display: none;
+    }
+}
