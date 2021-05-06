@@ -10,6 +10,9 @@ switch (type) {
         case "LOAD_CART":
             return {...state, itemsInCart: payload};
 
+            case "LOAD_WISHLIST":
+              return { ...state, itemsInWishlist: payload };
+              
             // filter data
 
             case "SORT":
