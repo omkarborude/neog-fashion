@@ -76,7 +76,31 @@
 .btn-addtocart:active{
   border: 1px solid white;
 }
+.addToCart-btn-div{
+  display: flex;
+}
+.addtowishlist-btn-div{
+  margin-left: 1rem;
 
+}
+.btn-addtowishlist{
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  padding-top: 0.2rem;
+}
+.btn-addtowishlist:hover{
+  cursor: pointer;
+}
+.bxs-bookmark-heart{
+   font-size: 1.5rem;
+   padding-top: 3px;
+   color: orangered;
+}
+.bx-bookmark-heart{
+  font-size: 1.5rem;
+   padding-top: 3px;
+}
 /* for mobile */
 @media only screen and (max-width: 800px) {
 
