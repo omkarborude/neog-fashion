@@ -16,8 +16,9 @@ export async function getApiProduct (URL) {
 
 // already exist 
 export const isAlreadyExist = (array, id) => {
-    for (let itemOfArray of array) {
-      if (itemOfArray.productId._id === id) return true;
+    for (let product of array) {
+      if (product.productId._id === id) 
+      return true;
     }
     return false;
   };
@@ -63,6 +64,83 @@ export const AddProductToCart = async (
     }
 
 };
+
+// add product to wishlist 
+export const AddProductToWishlist = async ({
+  state,
+  dispatch,
+  product,
+  userId
+}) => {
+  const hideToast = () => {
+    setTimeout(() => {
+        dispatch({type:"TOGGLE_TOAST",payload:"", value: false});
+      }, 1000)
+  }
+  dispatch({type:"TOGGLE_TOAST",payload:"adding  !", value: true})
+
+  try{
+    const {data:{response},status} = await axios({
+      method:"POST",
+      url:`${API}/wishlist/${userId}/wishlist`,
+      data:{ 
+        _id:product._id,
+        active:true,
+    }
+    });
+
+    if (status === 201 || status === 200) {
+      dispatch({type:"LOAD_WISHLIST",paylaod:response})
+    }
+    dispatch({type:"TOGGLE_TOAST",payload:"Added !", value: true});
+    hideToast()
+  } catch (error) {
+    console.log(error.message);
+    }
+  
+}
+
+
+export const RemoveProductWishlist = async ({
+  state,
+  dispatch,
+  product,
+  userId
+}) => {
+  const hideToast = () => {
+    setTimeout(() => {
+        dispatch({type:"TOGGLE_TOAST",payload:"", value: false});
+      }, 1000)
+  }
+  dispatch({type:"TOGGLE_TOAST",payload:"Removing..", value: true});
+  try {
+  
+    const {
+      data: { response },
+      status
+    } = await axios({
+      method: "POST",
+      url: `${API}/wishlist/${userId}/wishlist`,
+      data: {
+        _id: product._id,
+        active: false
+      }
+    });
+    if (status === 200 || status === 201) {
+      dispatch({
+        type: "LOAD_WISHLIST",
+        payload: response
+      });
+      dispatch({type:"TOGGLE_TOAST",payload:"Removed !", value: true});
+      hideToast()
+    }
+  } catch (error) {
+    console.error(error);
+    
+  } 
+};
+
+
 
 // remove product from cart
 export const RemoveProductCart = async ({
