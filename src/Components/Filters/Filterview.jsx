@@ -99,6 +99,7 @@ function SortPrice (e) {
                      min='300'
                      step='100'
                      max='2000'
+                     
                      value={state.ProductPriceRange}
                      onChange={(e) =>
                       dispatch({ type: "PRICE_RANGE", payload: Number(e.target.value) })
