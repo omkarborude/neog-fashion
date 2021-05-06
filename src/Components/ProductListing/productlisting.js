@@ -33,11 +33,11 @@ return (
                             
                             <div className="info-name">
                             <h6 className="product-name">
-                                <Link to={`/products/${item._id}`} 
+                                {/* <Link to={`/products/${item._id}`} 
                                 className="product-name"
-                                >
+                                > */}
                                 {item.name}
-                                </Link>
+                                {/* </Link> */}
                                 </h6>
                             </div>
 
@@ -62,6 +62,8 @@ return (
                                      key={item._id}
                                      product={item}
                                      />
+                                   
+
                             </div>
  
   

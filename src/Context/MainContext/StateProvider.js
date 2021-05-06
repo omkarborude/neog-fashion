@@ -12,11 +12,11 @@ export function StateProvider({children}) {
      
     const [state,dispatch] = useReducer(stateReducer,{
         products: [],
+        itemsInWishlist: [],
         itemsInCart: [],
         SortBy:"",
         showFastDelivery:false,
-        ProductPriceRange:2000,
-        
+        ProductPriceRange:2000,   
         dataFilter: {
             includeOutOfStock: true,
             filterByBrands: [],
@@ -27,7 +27,6 @@ export function StateProvider({children}) {
         }
     
     });
-     
     return (
       <StateContext.Provider value={{state,dispatch}}>
             {children}

@@ -30,6 +30,10 @@ export function Navbar () {
          <li><a href="#">Cart <i class="fas fa-shopping-cart"></i></a></li>
          </Link>
 
+         <Link to="wishlist" className="Link">
+         <li><a href="#">WishList <i class="fab fa-gratipay"></i></a></li>
+         </Link>
+
         {isUserloggedIn ? 
           <Link to="/account" className="Link">
         <li className="account-div">
