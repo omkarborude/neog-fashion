@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useStateProvider } from "./Context/MainContext/StateProvider"
 import {Navbar} from "./Components/Navbar/Navbar"
 import {Home} from "./Components"
-import {Login,Profile,SignUp,useAuth,Cart} from "./Components/index";
+import {Login,Profile,SignUp,useAuth,Cart,WishList} from "./Components/index";
 import {ProductListing} from "./Components/ProductListing/productlisting"
 import {getApiProduct} from "./ApiCalls/api-calls"
 import {Toast} from "./Components/Toast/Toast";
@@ -28,11 +28,40 @@ function App() {
         
         dispatch({type:"LOAD_PRODUCTS",payload:response})  
         hideToast()
+        
      } catch(error) {
        console.log(error);
      }
      })();
   },[])
+
+
+  // load user cart from server
+ useEffect(()=> {
+  if (isUserloggedIn) {
+   
+    dispatch({type:"TOGGLE_TOAST",payload:"Loading Cart..", value: true});
+     (async  ()  => {
+      try {
+        const {data:{response}} = await getApiProduct(`${API}/carts/${userId}/cart`);
+        dispatch({type:"LOAD_CART",payload:response});
+        hideToast()
+      }catch(error) {
+        console.log(error.message)
+      }
+      try {
+        dispatch({type:"TOGGLE_TOAST",payload:"Loading Cart..", value: true});
+        const {data:{response}} = await getApiProduct(`${API}/wishlist/${userId}/wishlist`);
+        dispatch({type:"LOAD_WISHLIST",payload:response});
+        hideToast()
+      }catch(error) {
+        console.log(error.message)
+      }
+      
+    }) ()
+  }
+},[isUserloggedIn])
+
 
   
  
@@ -47,6 +76,7 @@ function App() {
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/account" element={<Profile/>} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<WishList/>} />
       </Routes>
     </div>
   );
