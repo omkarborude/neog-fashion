@@ -16,22 +16,25 @@ export const Cart = () => {
       }, 1000)
   }
 
- // load user cart from server
- useEffect(()=> {
-  if (isUserloggedIn) {
-   
-    dispatch({type:"TOGGLE_TOAST",payload:"Loading Cart..", value: true});
-     (async  ()  => {
-      try {
-        const {data:{response}} = await getApiProduct(`${API}/carts/${userId}/cart`);
-        dispatch({type:"LOAD_CART",payload:response});
+  useEffect(()=> {
+    if (isUserloggedIn) {
+     
+      dispatch({type:"TOGGLE_TOAST",payload:"Loading Cart..", value: true});
+       (async  ()  => {
+        try {
+          const {data:{response}} = await getApiProduct(`${API}/carts/${userId}/cart`);
+          dispatch({type:"LOAD_CART",payload:response});
           hideToast()
-      }catch(error) {
-        console.log(error.message)
-      }
-    }) ()
-  }
-},[isUserloggedIn])
+        }catch(error) {
+          console.log(error.message)
+        }
+       
+        
+      }) ()
+    }
+  },[isUserloggedIn])
+
+
   return (
     <>
       <h1 className="cart-title">My Cart</h1>
