@@ -106,10 +106,17 @@
 
   .main-div{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .filter-div{
     margin: 0 auto;
     width: 80%;
   }
+  .lisiting-div{
+    width: 100%;
+  }
+  .product-card{
+    margin-left: 25%;
+  }
+  
 }

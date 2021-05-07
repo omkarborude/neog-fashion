@@ -1,3 +1,4 @@
+
 .wishlist-card-div{
     width: 35%;
     margin: 0 auto;
@@ -36,4 +37,37 @@
 }
 .btn-movetocart:active{
     border: 1px solid white;
+}
+.pro-bottm-div{
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.pro-bottm-div span{
+    color: orangered;
+}
+
+
+/* For Mobile */
+@media only screen and (max-width: 800px) {
+
+    .wishlist-main-div{
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .wishlist-card-div{
+         width: 60%;
+         margin: 0 auto;
+         height: auto;
+         flex-direction: column;
+          margin-top: 1rem;
+    }
+    .wishlist-card-img-div{
+        width: 80%;
+        height: 50%;
+        margin: 0 auto;
+    }
+    
 }
