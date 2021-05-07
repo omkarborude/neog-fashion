@@ -61,8 +61,12 @@ export const Cart = () => {
             <div className="cart-value-main-div">
            <CartValueDetails />
            </div>
+           
            {state.toast.value && <Toast message = {state.toast.message}/>}
           </div>
+          <div className="pro-bottm-div">
+                @Omkar.<span>Pro</span> Codes
+            </div>
         </>
       )}
     </>
