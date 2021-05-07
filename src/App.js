@@ -36,7 +36,7 @@ function App() {
   },[])
 
 
-  // load user cart from server
+  // load user Cart/Wishlist from server
  useEffect(()=> {
   if (isUserloggedIn) {
    
