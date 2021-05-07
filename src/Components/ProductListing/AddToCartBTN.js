@@ -36,7 +36,7 @@ export function AddToCartBTN({product}) {
                <button className="btn-addtowishlist"
                onClick={()=> {
                 isUserloggedIn ? isAlreadyExist(state.itemsInWishlist,product._id)
-                ?  navigate("/cart") : AddProductToWishlist({
+                ?  navigate("/wishlist") : AddProductToWishlist({
                    
                     state,
                     dispatch,
