@@ -16,7 +16,7 @@ const navigate = useNavigate();
         <div className="wishlist-main-div">
              
             {state.itemsInWishlist.length === 0 ? <h1 className="cart-title">Empty</h1> : <h1 className="cart-title">My Wishlist</h1> }
-          <>
+        
                 {state.itemsInWishlist.map(({ productId: product })=> {
 
                     return (
@@ -45,7 +45,7 @@ const navigate = useNavigate();
                                 }) : navigate("/login")
                             }}
                             className="btn-movetocart">
-                                Move TO Cart
+                                Add TO Cart
                             </button>
 
                             <button 
@@ -69,8 +69,10 @@ const navigate = useNavigate();
 
                     )
                 })} 
-                </>
-            
+               
+            <div className="pro-bottm-div">
+                @Omkar.<span>Pro</span> Codes
+            </div>
         </div>
     )
 }
