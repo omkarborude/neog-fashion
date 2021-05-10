@@ -2,15 +2,19 @@ import axios from "axios";
 import { useState } from "react";
 import "./signup.css"
 import {API} from "../index"
-import {useNavigate} from 'react-router-dom';
+import {useNavigate,useLocation} from 'react-router-dom';
+import {useAuth} from '../index';
 
 
 export const SignUp = () => {
     const navigate = useNavigate();
-
+    const { dispatch ,username } = useAuth();
     const [state,setState] = useState({email:"",password:"",username:""});
     const [errors,seterrors] = useState({email:"",password:"",username:""});
     const [showPassword,setShowPassword] = useState(false);
+    console.log(state)
+    const path = useLocation().state;
+
 
     // input handler
     const handleChange = (e) => {
@@ -42,27 +46,36 @@ export const SignUp = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-            try {
-                const {data,status} = await axios.post(`${API}/users/signup`,state);
+        try {
+            const {status,data } = await axios.post("https://bgletry.omkarborude8354.repl.co/users/signup",
+            state);
+            console.log(status)
+             if( status === 200 ){
+               localStorage.setItem('authToken',JSON.stringify(
+                 {login:true,data}));
+               dispatch({ type:"LOGIN_USER",payload:data })
+               dispatch({tyoe:"SET_LOGIN",payload:true})
+               navigate( "/")
+           
+            
+             } else {
+                navigate(path === null ? "/login" : path.from)
+             }
+             console.log(data)
 
-                if(status === 201){
-                    console.log(data.message);
-                    localStorage?.setItem(
-                        'authToken',JSON.stringify(
-                            {login:true,data})
-                      );
-                      
-                      navigate("/" )
-                     console.log(data)
-                     console.log(status)
-                     console.log("ok")
-                }
-            } catch (error) {
-                const {data,status} = error.response;
-                console.log("ok")
-            }
-        
-        console.log("ok")
+          } catch (error) {
+            
+             const { status, data } = error.response;
+
+             if(status === 401){
+               seterrors(state => ({...state,password:data.message}))
+             
+             }
+             else if(status === 404){
+               seterrors(state => ({...state,email:data.message}))
+              
+             }
+          } 
     }
 
     return (
@@ -109,6 +122,7 @@ export const SignUp = () => {
                        
                       <div>
                           <input 
+                         
                           type="submit" className="btn-submit" value="SIGNUP"
                           />
                           </div> 
