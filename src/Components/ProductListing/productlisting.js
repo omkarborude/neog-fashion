@@ -75,9 +75,7 @@ return (
         </div>
         {state.toast.message && <Toast message = {state.toast.message}/>}
 </div>
-<div className="pro-bottm-div">
-                @Omkar.<span>Pro</span> Codes
-            </div>
+
         </>
     )
 }

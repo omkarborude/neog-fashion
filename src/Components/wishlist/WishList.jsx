@@ -70,9 +70,7 @@ const navigate = useNavigate();
                     )
                 })} 
                
-            <div className="pro-bottm-div">
-                @Omkar.<span>Pro</span> Codes
-            </div>
+      
         </div>
     )
 }

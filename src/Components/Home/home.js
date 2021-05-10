@@ -15,10 +15,6 @@ export function Home() {
                 Shop Now !
             </button>
             </Link>
-
-            <div className="pro-bottm-div">
-                @Omkar.<span>Pro</span> Codes
-            </div>
     </div>
     )
 }
