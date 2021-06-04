@@ -1,0 +1,76 @@
+.myAddresses-tag {
+  text-align: center;
+}
+.myAddresses-inner-div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.myaddress-address-card {
+  padding: 1rem;
+  margin-left: 1rem;
+  border: 1px solid gainsboro;
+  margin-top: 1rem;
+}
+.myaddress-address-card:hover {
+  border: 1px solid white;
+  transition: 0.2s;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09), 0 10px 10px rgba(0, 0, 0, 0.09);
+}
+.myaddress-address-card-name {
+  font-weight: 500;
+  color: orangered;
+}
+.div-address-card-remove-btn {
+  margin-left: 1rem;
+}
+.myaddress-address-card-btn {
+  display: flex;
+  margin-top: 1rem;
+}
+.btn-remove-address-card {
+  padding: 0.2rem;
+  letter-spacing: 0.1rem;
+  background-color: white;
+  border: 1px solid gainsboro;
+}
+.btn-remove-address-card:hover {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.btn-remove-address-card:active {
+  border: 1px solid white;
+}
+.fa-check-circle {
+  color: orangered;
+}
+.div-btn-addnewaddress-my-addresses {
+  padding: 1rem;
+  text-align: center;
+}
+.btn-addnewaddress-my-addresses {
+  margin-top: 1rem;
+  background-color: white;
+  padding: 0.3rem;
+  border: 1px solid gainsboro;
+  letter-spacing: 0.1rem;
+}
+.btn-addnewaddress-my-addresses:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-addnewaddress-my-addresses:active {
+  border: 1px solid gainsboro;
+}
+/* For Mobile */
+@media only screen and (max-width: 800px) {
+}

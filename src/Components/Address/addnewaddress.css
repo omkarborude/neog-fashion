@@ -1,0 +1,88 @@
+.addNewAddress-form {
+  box-shadow: none;
+  border: 2px solid gainsboro;
+}
+.addnewaddress-tag {
+}
+.new-address-inner-div {
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 80%;
+  display: flex;
+  padding: 0.5rem;
+}
+.new-address-input-type {
+  width: 30%;
+  text-align: left;
+}
+.new-address-enter-name-div {
+  width: 70%;
+  text-align: left;
+}
+.new-address-enter-name-div input {
+  padding: 0.2rem;
+  border: 1px solid gainsboro;
+  width: 60%;
+  border-radius: 0.2rem;
+  padding-left: 1rem;
+}
+.new-address-enter-streetAddress-div {
+  width: 70%;
+  text-align: left;
+}
+.new-address-enter-streetAddress-div input {
+  padding: 0.2rem;
+  border: 1px solid gainsboro;
+  width: 80%;
+  border-radius: 0.2rem;
+  padding-left: 1rem;
+}
+
+.addAdress-btn-div {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.btn-addAddress {
+  padding: 0.6rem;
+  letter-spacing: 0.1rem;
+  background-color: #ffb703;
+  border: 2px solid white;
+  border-radius: 0.2rem;
+  color: white;
+  margin-left: 1rem;
+}
+.btn-addAddress:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  border: 2px solid #ffb703;
+}
+.btn-addAddress:active {
+  background-color: #f48c06;
+  transition: 0.3s;
+}
+.btn-addAddress-cancel {
+  background-color: white;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  margin-right: 1rem;
+  border: 1px solid gainsboro;
+}
+.btn-addAddress-cancel:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 800px) {
+  .new-address-inner-div {
+    width: 100%;
+  }
+  .new-address-enter-name-div input {
+    width: 100%;
+  }
+  .new-address-enter-streetAddress-div input {
+    width: 100%;
+  }
+}

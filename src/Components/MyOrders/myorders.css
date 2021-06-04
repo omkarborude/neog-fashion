@@ -1,0 +1,54 @@
+.myorders-main-div h1 {
+  text-align: center;
+  margin-top: 1rem;
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+
+.myorder-inner-div {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.myorder-order-card-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border: 1px solid gainsboro;
+}
+.myorder-card-products h3 {
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+.myorder-card-products-info {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid gainsboro;
+}
+.myorder-card-product-name {
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+.myorder-card-product-price {
+  color: gray;
+  margin-top: 0.2rem;
+}
+.myorder-card-product-price span {
+  color: orangered;
+}
+.myorder-card-address h3 {
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 800px) {
+  .myorder-order-card-div {
+    flex-direction: column;
+    width: 90%;
+  }
+}

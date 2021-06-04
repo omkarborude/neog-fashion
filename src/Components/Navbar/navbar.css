@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-} 
-.nav .Link{
-   text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.nav .Link {
+  text-decoration: none;
 }
 
-.nav{
+.nav {
   display: flex;
   height: 80px;
   width: 100%;
@@ -20,24 +20,24 @@
   position: sticky;
   text-decoration: none;
   top: 0;
-  box-shadow:0 1px 10px rgba(0,0,0,0.09);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.09);
   left: 0;
   background-color: white;
 }
-.nav .logo{
+.nav .logo {
   color: orangered;
   font-size: 30px;
   font-weight: 600;
 }
-.nav ul{
+.nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
-.nav ul li{
+.nav ul li {
   margin: 0 5px;
 }
-.nav ul li a{
+.nav ul li a {
   color: black;
   text-decoration: none;
   font-size: 18px;
@@ -47,49 +47,48 @@
   letter-spacing: 1px;
 }
 .nav ul li a.active,
-.nav ul li a:hover{
+.nav ul li a:hover {
   color: orangered;
 }
-.nav .menu-btn i{
+.nav .menu-btn i {
   color: black;
   font-size: 22px;
   cursor: pointer;
   display: none;
 }
-input[type="checkbox"]{
+input[type="checkbox"] {
   display: none;
 }
-#click{
+#click {
   display: none;
 }
-.account-div{
+.account-div {
   color: black;
 }
-.account-div:hover{
+.account-div:hover {
   color: orangered;
 }
-@media (max-width: 1000px){
-  .nav{
+@media (max-width: 1000px) {
+  .nav {
     padding: 0 40px 0 50px;
   }
 }
 
 /* responsive */
 @media (max-width: 920px) {
-  .nav .menu-btn i{
+  .nav .menu-btn i {
     display: block;
   }
-   .nav{
+  .nav {
     border-bottom: 1px solid gainsboro;
-
   }
-  .nav .logo{
+  .nav .logo {
     font-size: 22px;
-  } 
-  #click:checked ~ .menu-btn i:before{
+  }
+  #click:checked ~ .menu-btn i:before {
     content: "\f00d";
   }
-  .nav ul{
+  .nav ul {
     position: fixed;
     top: 80px;
     left: -100%;
@@ -100,14 +99,14 @@ input[type="checkbox"]{
     display: block;
     transition: all 0.1s ease;
   }
-  #click:checked ~ ul{
+  #click:checked ~ ul {
     left: 0;
   }
-  .nav ul li{
+  .nav ul li {
     width: 100%;
     margin: 40px 0;
   }
-  .nav ul li a{
+  .nav ul li a {
     width: 100%;
     margin-left: -100%;
     display: block;
@@ -115,19 +114,19 @@ input[type="checkbox"]{
     color: white;
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  #click:checked ~ ul li a{
+  #click:checked ~ ul li a {
     margin-left: 0px;
   }
   .nav ul li a.active,
-  .nav ul li a:hover{
+  .nav ul li a:hover {
     background: none;
   }
 
-  .account-div{
+  .account-div {
     color: white;
   }
 }
-.content{
+.content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -138,7 +137,7 @@ input[type="checkbox"]{
   padding: 0 30px;
   color: white;
 }
-.content div{
+.content div {
   font-size: 40px;
   font-weight: 700;
 }
