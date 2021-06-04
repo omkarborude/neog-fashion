@@ -6,10 +6,18 @@ import {
   getFilterProducts,
   getFilteredData,
 } from "../Filters/ProductFilter";
+import { toast } from "react-toastify";
 import { FilterMobile } from "../Filters/FilterMobile";
 import "./productlisting.css";
 import { AddToCartBTN } from "./AddToCartBTN";
+import { useEffect } from "react";
 export function ProductListing() {
+  useEffect(() => {
+    toast("Loading Products!", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  }, []);
   const { state, dispatch } = useStateProvider();
   const sortedProduct = getPriceSortProducts(state, state.products);
   const DeliveryFilter = getFilteredData(sortedProduct, state.showFastDelivery);
@@ -26,6 +34,10 @@ export function ProductListing() {
         {/* productlisting section */}
         <div className="lisiting-div">
           {FilterProducts.map((item) => {
+            var totalStarsArray = [];
+            for (var j = 1; j <= item.rating; j++) {
+              totalStarsArray.push(<i class="fas fa-star"></i>);
+            }
             return (
               <div className="product-card">
                 <div>
@@ -39,19 +51,17 @@ export function ProductListing() {
                   >
                     <div className="info-section">
                       <div className="info-name">
-                        <h6 className="product-name">
-                          {/* <Link to={`/products/${item._id}`} 
-                                className="product-name"
-                                > */}
-                          {item.name}
-                          {/* </Link> */}
-                        </h6>
+                        <h6 className="product-name">{item.name}</h6>
                       </div>
 
                       <div className="info-middle">
                         <p className="product-brand">{item.brand}</p>
 
-                        <p className="product-rating">{item.rating}</p>
+                        <p className="product-rating">
+                          {totalStarsArray.map((star) => {
+                            return star;
+                          })}
+                        </p>
 
                         <p className="producr-price">
                           Rs.{item.price}
@@ -72,7 +82,6 @@ export function ProductListing() {
             );
           })}
         </div>
-        {state.toast.message && <Toast message={state.toast.message} />}
       </div>
     </>
   );

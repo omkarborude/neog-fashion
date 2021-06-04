@@ -7,7 +7,6 @@ import "./addnewaddress.css";
 export const AddNewAddress = () => {
   const { userId } = useAuth();
   const { state, dispatch } = useStateProvider();
-  console.log(state);
   const navigate = useNavigate();
   const [newAddress, setNewAddress] = useState({
     name: "",
@@ -27,16 +26,6 @@ export const AddNewAddress = () => {
     zipCode: "",
     phoneNumber: "",
   });
-  //   const {
-  //     name,
-  //     city,
-  //     streetAddress,
-  //     stateName,
-  //     country,
-  //     zipCode,
-  //     phoneNumber,
-  //   } = newAddress;
-  console.log(newAddress);
 
   const formValidate = (newAddress) => {
     let name, city, streetAddress, stateName, country, zipCode, phoneNumber;

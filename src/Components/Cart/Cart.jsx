@@ -2,19 +2,22 @@ import { useEffect } from "react";
 import { getApiProduct, updateUserOrder } from "../../ApiCalls/api-calls";
 import { API } from "../index";
 import { useStateProvider } from "../index";
+import { toast } from "react-toastify";
 import { CartProductCard } from "./CartProductCard";
 import { CartValueDetails } from "./CartValue";
-import { useAuth, Toast } from "../index";
+import { useAuth } from "../index";
 import "./cart.css";
+
 export const Cart = () => {
+  useEffect(() => {
+    toast("Loading Cart!", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  }, []);
+
   const { state, dispatch } = useStateProvider();
   const { isUserloggedIn, userId } = useAuth();
-
-  const hideToast = () => {
-    setTimeout(() => {
-      dispatch({ type: "TOGGLE_TOAST", payload: "", value: false });
-    }, 1000);
-  };
 
   return (
     <>
@@ -40,8 +43,6 @@ export const Cart = () => {
             <div className="cart-value-main-div">
               <CartValueDetails />
             </div>
-
-            {state.toast.value && <Toast message={state.toast.message} />}
           </div>
         </>
       )}

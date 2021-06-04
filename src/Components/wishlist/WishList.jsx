@@ -1,14 +1,23 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useStateProvider } from "../index";
 import "./wishlist.css";
+import { toast } from "react-toastify";
+
 import {
   AddProductToCart,
   isAlreadyExist,
   RemoveProductWishlist,
 } from "../../ApiCalls/api-calls";
 import { useAuth, Toast } from "../index";
+import { useEffect } from "react";
 
 export const WishList = () => {
+  useEffect(() => {
+    toast("Loading Wish List!", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  }, []);
   const { state, dispatch } = useStateProvider();
   const { isUserloggedIn, userId } = useAuth();
   const navigate = useNavigate();

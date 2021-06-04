@@ -21,7 +21,6 @@ export const ProudctDetails = () => {
   for (var j = 1; j <= product.rating; j++) {
     totalStarsArray.push(<i class="fas fa-star"></i>);
   }
-  console.log(product);
 
   return (
     <div>
@@ -135,7 +134,9 @@ export const ProudctDetails = () => {
                   : navigate("/login");
               }}
             >
-              Add to Wish List{" "}
+              {isAlreadyExist(state?.itemsInWishlist, product._id)
+                ? "Go To Wish List"
+                : "Add TO Wish List"}{" "}
               {isAlreadyExist(state.itemsInWishlist, product._id) ? (
                 <i class="fab fa-gratipay"></i>
               ) : (
