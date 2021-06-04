@@ -36,9 +36,7 @@ export const AddProductToCart = async ({
   userId,
   dispatch,
 }) => {
-  console.log(product);
   try {
-    console.log(product);
     toast.dark("Adding to Cart!", {
       position: "top-right",
       autoClose: 2000,
@@ -247,7 +245,6 @@ export const updateNewAddress = async (address, dispatch, userId) => {
       position: "top-right",
       autoClose: 2000,
     });
-    console.log("run");
     const { status, data } = await axios.post(
       `${API}/address/${userId}/addresses`,
       address
@@ -304,7 +301,6 @@ export const updateUserOrder = async (dispatch, state, userId, navigate) => {
   const defaultAddres = await state.userSelectedAddress.find(function (e) {
     return e;
   });
-  console.log(defaultAddres);
   const orderDetails = {
     products: cartProducts.map(({ productId }) => ({
       name: productId.name,
