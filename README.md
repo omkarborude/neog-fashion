@@ -17,12 +17,19 @@ password:- password
 
 ## The salient features of the app are:
 -Cart
+
 -Wishlist
+
 -Place Order
+
 -Filter and Sort
+
 -Responsive design
+
 -Address management
+
 -Product detail page
+
 -Toast
 
 ## Technology Stack Used
