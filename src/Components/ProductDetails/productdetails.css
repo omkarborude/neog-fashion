@@ -1,0 +1,178 @@
+.product-detail-tag {
+  text-align: center;
+}
+.product-detail-card-div {
+  width: 80%;
+  height: 35rem;
+  display: flex;
+  margin: 0 auto;
+  /* background-color: red; */
+  padding: 1rem;
+  border: 1px solid gainsboro;
+}
+.product-detail-card-img-div {
+  width: 50%;
+}
+.product-detail-card-img {
+  width: 90%;
+  height: 100%;
+}
+.product-detail-card-info-div {
+  width: 50%;
+  padding: 2rem;
+}
+
+.product-detail-card-product-info h1 {
+  letter-spacing: 0.2rem;
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+.product-detail-info-color-black {
+  color: black;
+}
+.product-detail-brand {
+  color: gray;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+.product-detail-category {
+  color: gray;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+.product-detail-fastD {
+  color: gray;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+.fa-times-circle {
+  color: orangered;
+}
+.product-detail-inStock {
+  color: gray;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+.product-detail-price {
+  color: gray;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+.product-detail-price span {
+  color: black;
+}
+.product-detail-price .product-offer {
+  color: orangered;
+}
+.product-detail-rating {
+  color: gray;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+.product-detail-rating span {
+  color: black;
+}
+.fa-star {
+  color: gold;
+}
+.product-detail-card-btn-div {
+  border-top: 1px solid gainsboro;
+  margin-top: 1rem;
+  display: flex;
+  padding-top: 1rem;
+}
+.btn-product-detail-addtocart {
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  width: 15rem;
+  background-color: white;
+  border: 1px solid gray;
+}
+.fa-opencart {
+  color: orangered;
+}
+.btn-product-detail-addtocart:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  border: 1px solid black;
+}
+.btn-product-detail-addtocart:active {
+  border: 1px solid white;
+  transition: 0.1s;
+}
+.btn-product-detail-addtowishlist {
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  width: 15rem;
+  background-color: white;
+  border: 1px solid gray;
+  margin-left: 1rem;
+}
+.fa-clipboard-check {
+  color: orangered;
+}
+.btn-product-detail-addtowishlist:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  border: 1px solid black;
+}
+.btn-product-detail-addtowishlist:active {
+  border: 1px solid white;
+  transition: 0.1s;
+}
+
+.btn-radio-product-detail-option {
+  color: gray;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+.product-size-radio-btn {
+  font-size: 1rem;
+  margin-left: 0;
+  padding-right: 1rem;
+  margin-left: -0.8rem;
+  color: black;
+}
+
+/* for mobile */
+@media only screen and (max-width: 800px) {
+  .product-detail-card-div {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .product-detail-card-img-div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .product-detail-card-img {
+    width: 100%;
+  }
+  .product-detail-card-info-div {
+    width: 100%;
+  }
+  .product-detail-card-btn-div {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-product-detail-addtocart {
+    width: 100%;
+  }
+  .btn-product-detail-addtowishlist {
+    margin-top: 0.5rem;
+    margin-left: 0;
+    width: 100%;
+  }
+}

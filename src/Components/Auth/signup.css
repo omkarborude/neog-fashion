@@ -1,0 +1,81 @@
+.signup-main-div{
+    width: 100%;
+
+}
+form {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09), 0 10px 10px rgba(0, 0, 0, 0.09);
+}
+.input-div{
+    padding: 2rem;
+}
+.input-inner-div{
+    padding: 0.5rem;
+}
+.get-input{
+    padding: 0.8rem;
+    width: 70%;
+    border-radius: 0.5rem;
+    border: 1px solid gainsboro;
+}
+.signup-input-password-div{
+    padding: 0.5rem;
+    display: flex;    
+    text-align: center;
+    margin: 0 auto;
+}
+
+.signup-password-input{
+    padding: 0.8rem;
+    width: 70%;
+    margin:  0 auto;
+    border-radius: 0.5rem;
+    border: 1px solid gainsboro;
+}
+.bx-show, .bx-hide{
+    margin-left: -15rem;
+    margin-top: 0.7rem;
+    font-size: 1.3rem;
+}
+.btn-submit{
+    padding: 0.6rem;
+    width: 8rem;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    background-color: #00bFFF;
+    border: 2px solid #00bFFF;
+    color: white;
+    border-radius: 3px;
+    font-weight: 600;
+}
+.btn-submit:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: dodgerblue;
+    border: 2px solid dodgerblue;
+}
+.btn-submit:active{ 
+    background-color: #00BFFF;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    form{
+        width: 90%;
+        padding: 0.5rem;
+    }
+    .get-input{
+        width: 100%;
+    }
+    .signup-password-input{
+        width: 100%;
+    }
+    .bx-show, .bx-hide{
+        margin-right: -13rem;
+    }
+}

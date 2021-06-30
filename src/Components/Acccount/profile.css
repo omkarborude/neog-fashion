@@ -1,0 +1,110 @@
+.profile-main-div {
+  width: 100%;
+}
+.inner-main-div {
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09), 0 10px 10px rgba(0, 0, 0, 0.09);
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.accound-tag {
+  margin: 0 auto;
+  padding-top: 0.55rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid gainsboro;
+}
+.accound-tag span {
+  color: orangered;
+}
+.profile-info {
+  display: flex;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 0.3rem;
+}
+.user-info {
+  width: 80%;
+}
+.username-div {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid gainsboro;
+}
+.info-name {
+  color: orangered;
+  float: left;
+  margin-right: 30%;
+}
+.profile-pic {
+  width: 20%;
+  padding: 1rem;
+}
+.fa-id-badge {
+  font-size: 8rem;
+  font-weight: 100;
+  color: skyblue;
+}
+
+.btn-logout-div {
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.btn-logout {
+  padding: 0.3rem;
+  width: 8rem;
+  background-color: #00bfff;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid #00bfff;
+  font-size: 18px;
+}
+.btn-logout:hover {
+  cursor: pointer;
+}
+.btn-logout:active {
+  background-color: dodgerblue;
+}
+.acccount-data-div {
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn-account-my-orders {
+  background-color: white;
+  border: 1px solid gainsboro;
+  padding: 0.4rem;
+  letter-spacing: 0.1rem;
+}
+.btn-account-my-orders:hover {
+  background-color: black;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  border: 1px solid black;
+}
+.btn-account-my-orders:active {
+  border: 1.2px solid white;
+}
+.fa-map-marker-alt,
+.fa-shipping-fast {
+  color: orangered;
+}
+@media only screen and (max-width: 800px) {
+  .inner-main-div {
+    width: 90%;
+  }
+  .profile-pic {
+    display: none;
+  }
+  .user-info {
+    width: 100%;
+  }
+  .username-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

@@ -1,0 +1,131 @@
+.main-div-filter{
+    padding:  0 1rem;
+    
+}
+.filter{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    font-size: 18px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+ 
+  
+
+  
+.Filter-desktop {
+  position: fixed;
+  top: 136px;
+  left: 10px;
+  bottom: 10px;
+  width: 18%;
+  border-right: 1px solid gainsboro;
+}
+.Filter-mobile {
+  display: none;
+}
+
+.btn-open {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+.btn-close {
+  font-size: 35px;
+  background: none;
+  border: none;
+}
+.filtermobile {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.4s;
+}
+.showfilter {
+  width: 100%;
+}
+
+.hidefilter {
+  width: 0;
+}
+.filter-heading {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  justify-content: space-between;
+}
+
+.sort-by{
+  font-size: 1rem;
+  margin-top: 0.8rem;
+}
+
+.price-range{
+  color: orangered;
+}
+.filter-brands-div{
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid gainsboro;
+}
+.filter-brands-tag{
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: orangered;
+}
+.filter-brands-label{
+  margin-top: 0.5rem;
+}
+.flter-sort-tag{
+  font-weight: 500;
+  color: orangered;
+}
+.filter-top-div{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 0.5rem;
+}
+.btn-clear-filter{
+  background-color: white;
+  border: 1px solid gray;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-weight: 500;  
+}
+.btn-clear-filter:hover{
+  cursor: pointer;
+  background-color: black;
+  color:  white;
+  transition: 0.3s;
+}
+.btn-clear-filter:active{
+  border: 2px solid white;
+}
+
+
+/* Mobile View */
+@media only screen and (max-width: 800px) {
+  
+  .Filter-desktop {
+    display: none;
+  }
+  .Filter-mobile {
+    display: flex;
+    margin-left: 1rem;
+    justify-content: space-around;
+  }
+  .Filter-mobile button{
+    margin-left: 5rem;
+  }
+}
