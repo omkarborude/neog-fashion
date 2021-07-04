@@ -1,7 +1,7 @@
 # Ecommerce App 
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/smilegupta)
 [![Omkar.Pro](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/omkarborude) [![Made For Neog](https://img.shields.io/badge/Made%20For-Neog-orange.svg)](https://github.com/omkarborude)
-
+[![wakatime](https://wakatime.com/badge/github/omkarborude/neog-fashion.svg)](https://wakatime.com/badge/github/omkarborude/neog-fashion)
 
 🏆 Enog-Fashion is Ecommerce Web App.
 
