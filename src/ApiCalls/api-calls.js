@@ -1,6 +1,7 @@
 import { toast } from "react-toastify";
 import { API } from "../API";
 import axios from "axios";
+import { useAuth, useStateProvider } from "../Components";
 
 // getting product from api
 export async function getApiProduct(URL) {
@@ -326,6 +327,74 @@ export const updateUserOrder = async (dispatch, state, userId, navigate) => {
       position: "top-center",
       autoClose: 3000,
     });
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+// useEffect Call
+
+export const LoadAllProducts = async (dispatch) => {
+  try {
+    const {
+      data: { response },
+    } = await getApiProduct(`${API}/products`);
+
+    dispatch({ type: "LOAD_PRODUCTS", payload: response });
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+export const LoadUserCartWishList = async (dispatch, userId) => {
+  try {
+    const {
+      data: { response },
+    } = await getApiProduct(`${API}/carts/${userId}/cart`);
+    dispatch({ type: "LOAD_CART", payload: response });
+  } catch (error) {
+    alert(error.message);
+  }
+  try {
+    const {
+      data: { response },
+    } = await getApiProduct(`${API}/wishlist/${userId}/wishlist`);
+    dispatch({ type: "LOAD_WISHLIST", payload: response });
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+export const LoadUserOrder = async (dispatch, userId) => {
+  try {
+    const { status, data } = await axios.get(`${API}/userorders/${userId}`);
+    dispatch({ type: "UPDATE_USER_ORDERS", payload: data.response });
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+export const LoadUserAddresses = async (dispatch, userId) => {
+  try {
+    const { status, data } = await axios.get(
+      `${API}/address/${userId}/addresses`
+    );
+    if (status === 200 || status === 201) {
+      dispatch({
+        type: "UPDATE_USER_ADDRESSES",
+        payload: data.response,
+      });
+    }
+  } catch (error) {
+    alert(error.message);
+  }
+  try {
+    const { status, data } = await axios.get(
+      `${API}/address/${userId}/addresses/defaultaddress`
+    );
+    if (status === 200 || status === 201) {
+      dispatch({ type: "UPDATE_DEFAULT_ADDRESS", payload: data.response });
+    }
   } catch (error) {
     alert(error.message);
   }

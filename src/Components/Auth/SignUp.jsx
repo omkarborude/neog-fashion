@@ -5,6 +5,26 @@ import { API } from "../index";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../index";
 
+// validate Input
+const InputValidate = (data) => {
+  let username, email, password;
+
+  if (data.username === "") {
+    username = "Please Enter the username";
+  }
+  if (!/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/.test(data.email)) {
+    email = "Please Enter Valid Email";
+  }
+  if (!/^(?=.*\d)(?=.*[a-z])(?=.*[a-zA-Z]).{8,}$/.test(data.password)) {
+    password =
+      "Password should contain 8 letters(atleast 1 number,  smallcase and uppercase alphabets";
+
+    if (!username && !email && !password) {
+      return true;
+    }
+  }
+};
+
 export const SignUp = () => {
   const navigate = useNavigate();
   const { dispatch, username } = useAuth();
@@ -22,27 +42,6 @@ export const SignUp = () => {
   const handleChange = (e) => {
     const { value, name } = e.target;
     setState((state) => ({ ...state, [name]: value }));
-  };
-
-  // validate Input
-  export const InputValidate = (data) => {
-    let username, email, password;
-
-    if (data.username === "") {
-      username = "Please Enter the username";
-    }
-    if (!/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/.test(data.email)) {
-      email = "Please Enter Valid Email";
-    }
-    if (!/^(?=.*\d)(?=.*[a-z])(?=.*[a-zA-Z]).{8,}$/.test(data.password)) {
-      password =
-        "Password should contain 8 letters(atleast 1 number,  smallcase and uppercase alphabets";
-
-      seterrors({ username, email, password });
-      if (!username && !email && !password) {
-        return true;
-      }
-    }
   };
 
   //  submit handler

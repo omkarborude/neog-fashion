@@ -22,7 +22,7 @@ export const MyOrders = () => {
                 <div className="myorder-card-products">
                   <h3>Order Products</h3>
 
-                  {orderRef.products.map((product) => {
+                  {orderRef?.products.map((product) => {
                     return (
                       <div className="myorder-card-products-info">
                         <p className="myorder-card-product-name">
@@ -45,18 +45,18 @@ export const MyOrders = () => {
                   <div>
                     <div className="myaddress-address-card">
                       <h4 className="myaddress-address-card-name">
-                        {orderRef.deliveryaddress.name}
+                        {orderRef?.deliveryaddress?.name}
                       </h4>
-                      <p>{orderRef.deliveryaddress.streetAddress}</p>
+                      <p>{orderRef?.deliveryaddress?.streetAddress}</p>
                       <p>
-                        {orderRef.deliveryaddress.city}{" "}
-                        <span>{orderRef.deliveryaddress.zipCode}</span>
+                        {orderRef?.deliveryaddress?.city}{" "}
+                        <span>{orderRef?.deliveryaddress?.zipCode}</span>
                       </p>
                       <p>
-                        {orderRef.deliveryaddress.stateName} ,{" "}
-                        {orderRef.deliveryaddress.country}
+                        {orderRef?.deliveryaddress?.stateName} ,{" "}
+                        {orderRef?.deliveryaddress?.country}
                       </p>
-                      <p>{orderRef.deliveryaddress.phoneNumber}</p>
+                      <p>{orderRef?.deliveryaddress?.phoneNumber}</p>
                     </div>
                   </div>
                 </div>
