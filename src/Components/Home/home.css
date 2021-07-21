@@ -1,16 +1,32 @@
-.home-main-div{
-    text-align: center;
+.home-main-div {
+  text-align: center;
 }
-.btn-home-shop-now{
-    margin-top: 1rem;
-    padding: 0.8rem;
-    font-size: 1rem;
-    background-color: white;
-    border: 2px solid gainsboro;
+.btn-home-shop-now {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: white;
+  border: 2px solid gainsboro;
 }
-.btn-home-shop-now:hover{
-    background-color: black;
-    color: white;
-    transition: 0.3s;
-    cursor: pointer;
+.btn-home-shop-now:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.home-main-omg-div {
+  width: 100%;
+  height: 30rem;
+}
+.home-main-omg-div img {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 800px) {
+  .home-main-omg-div {
+    height: 10rem;
+  }
 }

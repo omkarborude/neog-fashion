@@ -1,20 +1,15 @@
 import { Link } from "react-router-dom";
-import "./home.css"
+import "./home.css";
 
 export function Home() {
-
-
-    return (
-    <div className="home-main-div"> 
-        <div>
-            <h1>Home Page </h1>
-            <span>Working On it !</span>
+  return (
+    <div className="home-main-div">
+      <Link to="/products" className="Link">
+        <div className="home-main-omg-div">
+          <img src="https://www.linkpicture.com/q/Neog-Fashion.jpg" />
         </div>
-            <Link end to="/products" className="Link" >
-            <button className="btn-home-shop-now">
-                Shop Now !
-            </button>
-            </Link>
+      </Link>
+      <div className="home-categaory-div"></div>
     </div>
-    )
+  );
 }
