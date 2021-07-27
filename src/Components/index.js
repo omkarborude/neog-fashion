@@ -1,3 +1,6 @@
+import ImageSlider from "./Slider/ImageSlider";
+import { SliderData } from "./Slider/SliderData";
+
 export { Home } from "./Home/home";
 export { Navbar } from "./Navbar/Navbar";
 export { ProductListing } from "./ProductListing/productlisting";
