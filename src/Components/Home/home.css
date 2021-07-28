@@ -1,32 +1,124 @@
 .home-main-div {
   text-align: center;
 }
-.btn-home-shop-now {
-  margin-top: 1rem;
-  padding: 0.8rem;
-  font-size: 1rem;
-  background-color: white;
-  border: 2px solid gainsboro;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.btn-home-shop-now:hover {
+
+.section-c {
+  background-color: #fff;
+  color: black;
+  padding-top: 2rem;
+  margin-bottom: 40px;
+}
+.home-logo-tag {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.home-buy-btn {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: black;
   color: white;
-  transition: 0.3s;
+  border: 1px solid black;
+}
+.home-buy-btn:hover {
   cursor: pointer;
 }
-.home-main-omg-div {
-  width: 100%;
-  height: 30rem;
+
+.home-logo-img {
+  width: 10rem;
+  height: 10rem;
 }
-.home-main-omg-div img {
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
+.section-c .row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-c .row .col50 {
+  position: relative;
+  width: 50%;
+  padding-left: 3rem;
+  text-align: left;
+  /* margin-left: 76px; */
+}
+
+.section-c .row .col50 h4 {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 0px 13px;
+}
+
+.section-c .row .col50 h1 {
+  font-size: 3rem;
+  line-height: 57px;
+  margin-bottom: 35px;
+}
+
+.section-c .row .col50 p {
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  padding-bottom: 16px;
+  width: 98%;
+}
+
+.section-c .row .col50 .img-box {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+
+.section-c .row .col50 .img-box img {
+  max-width: 100%;
+  margin-left: 65px;
+}
+
+@media (max-width: 991px) {
+  .section-c .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .section-c {
+    width: 100%;
+    padding: 0.3rem;
+  }
+
+  .section-c .row .col50 {
+    width: 100%;
+  }
+
+  .section-c .row .col50 h1 {
+    max-width: 90%;
+    font-size: 1.5rem;
+  }
+
+  .section-c .row .col50 p {
+    display: none;
+  }
+
+  .section-c .row .col50 .img-box {
+    margin-top: 50px;
+    max-width: 85%;
+  }
+
+  .section-c .row .col50 .img-box img {
+    margin-left: 0px;
+  }
 }
 
 /* For Mobile */
 @media only screen and (max-width: 800px) {
   .home-main-omg-div {
     height: 10rem;
+    position: absolute;
+    overflow: hidden;
   }
 }
