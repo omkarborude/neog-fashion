@@ -82,6 +82,18 @@
   transition: 0.3s;
 }
 
+.guest-login-div {
+  margin-top: 1rem;
+}
+.login-guest-btn {
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+}
+.login-guest-btn:hover {
+  cursor: pointer;
+  color: red;
+}
 @media only screen and (max-width: 800px) {
   .login-main-div form {
     width: 90%;
