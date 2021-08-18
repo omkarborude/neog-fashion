@@ -1,28 +1,15 @@
 import { ToastContainer, toast } from "react-toastify";
-import {
-  getApiProduct,
-  LoadAllProducts,
-  LoadUserAddresses,
-  LoadUserCartWishList,
-  LoadUserOrder,
-} from "./ApiCalls/api-calls";
 import { Routes, Route } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { PrivateRoute } from "./PrivateRoute";
-import { useEffect } from "react";
-import axios from "axios";
 import "./App.css";
-
 import {
   Login,
   Home,
   Navbar,
-  API,
-  useStateProvider,
   Profile,
   ProductListing,
   SignUp,
-  useAuth,
   Cart,
   WishList,
   AddNewAddress,
@@ -32,23 +19,6 @@ import {
 } from "./Components/index";
 
 function App() {
-  const { isUserloggedIn, userId } = useAuth();
-  const { dispatch, state } = useStateProvider();
-
-  // Load product from server
-  useEffect(() => {
-    LoadAllProducts(dispatch);
-  }, []);
-
-  // load user Cart/Wishlist from server
-  useEffect(() => {
-    if (isUserloggedIn) {
-      LoadUserCartWishList(dispatch, userId);
-      LoadUserOrder(dispatch, userId);
-      LoadUserAddresses(dispatch, userId);
-    }
-  }, [isUserloggedIn]);
-
   return (
     <div className="App">
       <Navbar />

@@ -1,7 +1,34 @@
+import { useEffect } from "react";
+import {
+  getApiProduct,
+  LoadAllProducts,
+  LoadUserAddresses,
+  LoadUserCartWishList,
+  LoadUserOrder,
+} from "../../ApiCalls/api-calls";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../Context/AuthContext/AuthProvider";
+import { useStateProvider } from "../../Context/MainContext/StateProvider";
 import "./home.css";
 
 export function Home() {
+  const { isUserloggedIn, userId } = useAuth();
+  const { dispatch, state } = useStateProvider();
+
+  // Load product from server
+  useEffect(() => {
+    LoadAllProducts(dispatch);
+  }, []);
+
+  // load user Cart/Wishlist from server
+  useEffect(() => {
+    if (isUserloggedIn) {
+      LoadUserCartWishList(dispatch, userId);
+      LoadUserOrder(dispatch, userId);
+      LoadUserAddresses(dispatch, userId);
+    }
+  }, [isUserloggedIn]);
+
   return (
     <div className="home-main-div">
       <section className="section-c">
